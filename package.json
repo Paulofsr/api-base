@@ -1,0 +1,39 @@
+{
+  "name": "ms-videos",
+  "version": "1.0.0",
+  "description": "Videos control center",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env LOGGING_CONSOLE_LEVEL=debug LOGGING_FILE_LEVEL=debug LOGGING_DB_LEVEL=error LOGGING_SAVE_REQUESTS=true LOGGING_USE_DB=false nodemon server.js",
+    "dev": "cross-env NODE_ENV=dev node src/server.js",
+    "test": "istanbul cover --reporter=html ./node_modules/mocha/bin/_mocha -- -R spec --recursive"
+  },
+  "author": "Paulo Francisco",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.3",
+    "express-load": "^1.1.16",
+    "http": "0.0.0",
+    "jsonwebtoken": "^8.1.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.2.3",
+    "morgan": "^1.9.0",
+    "node-fetch": "^2.1.2",
+    "nodemailer": "^4.6.7",
+    "nodemon": "^1.18.3",
+    "winston": "^3.0.0",
+    "winston-daily-rotate-file": "^3.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-arrays": "^2.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "promise": "^8.0.1",
+    "supertest": "^3.1.0"
+  }
+}
