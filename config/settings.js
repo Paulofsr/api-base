@@ -2,8 +2,8 @@
 var util = require('util');
 
 module.exports = {
-    mongoUrl: util.format('mongodb://%s/ms-videos', process.env.DB || 'localhost'),
-    servicePort: process.env.PORT || 5300,
+    mongoUrl: util.format('mongodb://%s/ms-api-base-galera', process.env.DB || 'localhost'),
+    servicePort: process.env.PORT || 5555,
     isMongoDebug: true,
     logging: {
         consoleLevel: process.env.LOGGING_CONSOLE_LEVEL || 'debug',

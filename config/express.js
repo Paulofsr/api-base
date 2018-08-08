@@ -28,7 +28,7 @@ module.exports = function () {
     app.use(cors());
     app.use(morgan('dev'));
     app.use(expressHelper.createLogger);
-    app.use(expressHelper.parseCurrentUser);
+    // app.use(expressHelper.parseCurrentUser);
     // app.use(mung.json(
     //     function transform(body, req) {
     //         // if (settings.logging.saveRequests && req.logger.currentUser) {

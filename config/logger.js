@@ -1,8 +1,9 @@
 var winston = require('winston');
 require('winston-daily-rotate-file');
 var HelperFactory = require('../helpers/mainHelper');
+var settings = require('./settings');
 
-module.exports = function (settings) {
+module.exports = function () {
     var hashHelper = HelperFactory.getHelper('hash');
     var dateHelper = HelperFactory.getHelper('date');
     var logger = winston.createLogger({

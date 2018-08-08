@@ -1,13 +1,12 @@
 module.exports = function (app) {
-    var controller = app.controllers.video;
+    var controller = app.controllers.user;
 
-    app.route('/v1/videos')
+    app.route('/v1/users')
         .get(controller.getAll)
         .post(controller.add);
 
-    app.route('/v1/videos/:id')
+    app.route('/v1/users/:id')
         .get(controller.getById)
         .put(controller.update)
-        .post(controller.update)
         .delete(controller.delete);
 }

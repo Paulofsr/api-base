@@ -11,11 +11,11 @@ RUN apk update && \
 
 WORKDIR /app
 
-COPY ./ .
+COPY . .
 
 RUN chmod +x start.sh && \ 
     npm i 
 
-EXPOSE 5300
+EXPOSE 5555
 
 CMD ["./start.sh"]
